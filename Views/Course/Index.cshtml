@@ -1,0 +1,29 @@
+@model IEnumerable<Candidate>
+
+<header>
+    <p class="display-4">Applications (@Model.Count())</p>
+</header>
+
+<main>
+    <table class="table table-striped">
+        <thead>
+            <th>E-mail</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Applied At</th>
+        </thead>
+        <tbody>
+            @foreach(Candidate candidate in Model)
+            {
+                <tr>
+                    <td>@candidate.email</td>
+                    <td>@candidate.fullName</td>
+                    <td>@candidate.age</td>
+                    <td>@candidate.selectedCourse</td>
+                    <td>@candidate.applyAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>

@@ -1,0 +1,59 @@
+@model Candidate 
+
+<header style="width: 70%; margin: auto; text-align: center;">
+    <div>
+        <p class="display-4">Apply</p>    
+    </div>
+</header>
+
+<main style="width: 70%; margin: auto">
+    <form method="post" asp-action="Apply">
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+        <div class="form-group my-3">
+            <label>E-mail</label>
+            <input type="text" name="email" class="form-control">
+        </div>
+
+        <div class="form-group my-3">
+            <label>First Name</label>
+            <input type="text" name="firstName" class="form-control">
+        </div>
+        
+        <div class="form-group my-3">
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="form-control">
+        </div>
+
+        <div class="form-group my-3">
+            <label>Age</label>
+            <select class="form-control" name="age">
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+            </select>
+        </div>
+
+        <div class="form-group my-3">
+            <fieldset>
+                <input type="radio" name="selectedCourse" value="MVC" checked/>
+                <label>MVC</label>
+
+                <input type="radio" name="selectedCourse" value="API">
+                <label>API</label>
+
+                <input type="radio" name="selectedCourse" value="Bootstrap">
+                <label>Bootstrap</label>
+            </fieldset>
+        </div>
+
+        <div class="form-group my-3">
+            <input type="submit" class="btn btn-primary" value="Submit">
+            <a href="/Home">
+                <input type="button" class="btn btn-warning" value="Home">
+            </a>
+        </div>
+    </form>
+</main>
